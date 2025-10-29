@@ -14,6 +14,7 @@ Edit `app/page.tsx` to customize:
 - Your biography text
 - Your LinkedIn URL (currently set to `https://www.linkedin.com/in/noahspear`)
 - Your X (Twitter) URL (currently set to `https://x.com/noahspear`)
+- Your contact email address for the email button (which copies the address to the clipboard) by editing the `CONTACT_EMAIL` constant in `app/page.tsx` (currently `noah@noahspear.com`)
 
 ### 3. Run the Development Server
 
