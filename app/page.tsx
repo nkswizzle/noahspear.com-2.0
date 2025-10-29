@@ -142,6 +142,32 @@ export default function Home() {
         <div className="mt-4 text-center text-sm text-gray-600 dark:text-gray-300" aria-live="polite">
           {copyStatus === "copied" && "Email copied to clipboard!"}
           {copyStatus === "error" && "Unable to copy email. Please copy it manually."}
+              <svg
+                className="w-6 h-6"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+              </svg>
+              <span className="font-semibold">X</span>
+            </a>
+
+            {/* Email */}
+            <a
+              href={`mailto:${CONTACT_EMAIL}`}
+              className="group flex items-center justify-center gap-2 px-6 py-3 bg-emerald-500 hover:bg-emerald-600 text-white rounded-lg transition-all duration-200 transform hover:scale-105 shadow-md hover:shadow-lg"
+            >
+              <svg
+                className="w-6 h-6"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path d="M20.5 4h-17A1.5 1.5 0 002 5.5v13A1.5 1.5 0 003.5 20h17a1.5 1.5 0 001.5-1.5v-13A1.5 1.5 0 0020.5 4zm-.3 2l-7.73 6.23a1 1 0 01-1.24 0L3.5 6zM3 18.5V8.12l7.48 6a3 3 0 003.74 0L21 8.12V18.5z" />
+              </svg>
+              <span className="font-semibold">Email</span>
+            </a>
         </div>
       </div>
     </main>
