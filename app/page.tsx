@@ -1,6 +1,8 @@
 import Image from "next/image";
 import AnimatedBackground from "./components/AnimatedBackground";
 
+const CONTACT_EMAIL = "noah@noahspear.com";
+
 export default function Home() {
   return (
     <main className="relative min-h-screen flex items-center justify-center p-4 sm:p-6 md:p-8 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 overflow-hidden">
@@ -27,9 +29,7 @@ export default function Home() {
         {/* Biography */}
         <div className="text-center mb-6 sm:mb-8">
           <p className="text-base sm:text-lg md:text-xl text-gray-700 dark:text-gray-200 leading-relaxed drop-shadow-md">
-            Welcome to my personal website. I'm passionate about technology, innovation,
-            and building meaningful connections. Feel free to connect with me on social media
-            to learn more about my work and interests.
+            Hello
           </p>
         </div>
 
@@ -69,6 +69,22 @@ export default function Home() {
                 <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
               </svg>
               <span className="font-semibold">X</span>
+            </a>
+
+            {/* Email */}
+            <a
+              href={`mailto:${CONTACT_EMAIL}`}
+              className="group flex items-center justify-center gap-2 px-6 py-3 bg-emerald-500 hover:bg-emerald-600 text-white rounded-lg transition-all duration-200 transform hover:scale-105 shadow-md hover:shadow-lg"
+            >
+              <svg
+                className="w-6 h-6"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path d="M20.5 4h-17A1.5 1.5 0 002 5.5v13A1.5 1.5 0 003.5 20h17a1.5 1.5 0 001.5-1.5v-13A1.5 1.5 0 0020.5 4zm-.3 2l-7.73 6.23a1 1 0 01-1.24 0L3.5 6zM3 18.5V8.12l7.48 6a3 3 0 003.74 0L21 8.12V18.5z" />
+              </svg>
+              <span className="font-semibold">Email</span>
             </a>
         </div>
       </div>
