@@ -130,11 +130,17 @@ export default function Home() {
           >
             <svg
               className="w-6 h-6"
-              fill="currentColor"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth={2}
               viewBox="0 0 24 24"
               aria-hidden="true"
             >
-              <path d="M20.5 4h-17A1.5 1.5 0 002 5.5v13A1.5 1.5 0 003.5 20h17a1.5 1.5 0 001.5-1.5v-13A1.5 1.5 0 0020.5 4zm-.32l-7.73 6.23a1 1 0 01-1.24 0L3.5 6zM3 18.5V8.12l7.48 6a3 3 0 003.74 0L21 8.12V18.5z" />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+              />
             </svg>
           </button>
         </div>
