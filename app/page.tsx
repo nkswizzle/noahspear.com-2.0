@@ -8,6 +8,7 @@ const CONTACT_EMAIL = "noah@noahspear.com";
 
 export default function Home() {
   const [copyStatus, setCopyStatus] = useState<"idle" | "copied" | "error">("idle");
+  const [activeSection, setActiveSection] = useState<string | null>(null);
 
   useEffect(() => {
     if (copyStatus === "idle") {
@@ -154,7 +155,12 @@ export default function Home() {
           {/* Bookshelf */}
           <button
             type="button"
-            className="flex flex-col items-center justify-center p-6 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-md hover:shadow-lg transition-all duration-200 transform hover:scale-105 border border-gray-200 dark:border-gray-700"
+            onClick={() => setActiveSection(activeSection === "bookshelf" ? null : "bookshelf")}
+            className={`flex flex-col items-center justify-center p-6 backdrop-blur-sm rounded-lg shadow-md hover:shadow-lg transition-all duration-200 transform hover:scale-105 border ${
+              activeSection === "bookshelf"
+                ? "bg-blue-100 dark:bg-blue-900/50 border-blue-400 dark:border-blue-600"
+                : "bg-white/80 dark:bg-gray-800/80 border-gray-200 dark:border-gray-700"
+            }`}
           >
             <svg
               className="w-8 h-8 mb-3 text-gray-700 dark:text-gray-200"
@@ -174,10 +180,15 @@ export default function Home() {
             <span className="text-xs text-gray-600 dark:text-gray-400 mt-1">Books & Reading</span>
           </button>
 
-          {/* Links/Bookmarks */}
+          {/* Products */}
           <button
             type="button"
-            className="flex flex-col items-center justify-center p-6 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-md hover:shadow-lg transition-all duration-200 transform hover:scale-105 border border-gray-200 dark:border-gray-700"
+            onClick={() => setActiveSection(activeSection === "products" ? null : "products")}
+            className={`flex flex-col items-center justify-center p-6 backdrop-blur-sm rounded-lg shadow-md hover:shadow-lg transition-all duration-200 transform hover:scale-105 border ${
+              activeSection === "products"
+                ? "bg-blue-100 dark:bg-blue-900/50 border-blue-400 dark:border-blue-600"
+                : "bg-white/80 dark:bg-gray-800/80 border-gray-200 dark:border-gray-700"
+            }`}
           >
             <svg
               className="w-8 h-8 mb-3 text-gray-700 dark:text-gray-200"
@@ -190,17 +201,22 @@ export default function Home() {
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"
+                d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
               />
             </svg>
-            <span className="font-semibold text-gray-900 dark:text-white">Links</span>
-            <span className="text-xs text-gray-600 dark:text-gray-400 mt-1">Bookmarks & Resources</span>
+            <span className="font-semibold text-gray-900 dark:text-white">Products</span>
+            <span className="text-xs text-gray-600 dark:text-gray-400 mt-1">Recommendations</span>
           </button>
 
           {/* Music */}
           <button
             type="button"
-            className="flex flex-col items-center justify-center p-6 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-md hover:shadow-lg transition-all duration-200 transform hover:scale-105 border border-gray-200 dark:border-gray-700"
+            onClick={() => setActiveSection(activeSection === "music" ? null : "music")}
+            className={`flex flex-col items-center justify-center p-6 backdrop-blur-sm rounded-lg shadow-md hover:shadow-lg transition-all duration-200 transform hover:scale-105 border ${
+              activeSection === "music"
+                ? "bg-blue-100 dark:bg-blue-900/50 border-blue-400 dark:border-blue-600"
+                : "bg-white/80 dark:bg-gray-800/80 border-gray-200 dark:border-gray-700"
+            }`}
           >
             <svg
               className="w-8 h-8 mb-3 text-gray-700 dark:text-gray-200"
@@ -220,6 +236,96 @@ export default function Home() {
             <span className="text-xs text-gray-600 dark:text-gray-400 mt-1">Playlists</span>
           </button>
         </div>
+
+        {/* Content Display Area */}
+        {activeSection && (
+          <div className="mt-8 p-6 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-md border border-gray-200 dark:border-gray-700">
+            {activeSection === "bookshelf" && (
+              <div className="space-y-6">
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Bookshelf</h3>
+
+                {/* Books Section */}
+                <div>
+                  <h4 className="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-3">Books</h4>
+                  <div className="space-y-3">
+                    <div>
+                      <a
+                        href="https://amzn.to/4nwX9MP"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-blue-600 dark:text-blue-400 hover:underline font-medium"
+                      >
+                        Beneath a Scarlet Sky
+                      </a>
+                      <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                        One of, if not the, best stories I've read around WW2
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Articles Section */}
+                <div>
+                  <h4 className="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-3">Articles</h4>
+                  <div className="space-y-3">
+                    <div>
+                      <a
+                        href="https://www.highagency.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-blue-600 dark:text-blue-400 hover:underline font-medium"
+                      >
+                        High Agency
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {activeSection === "products" && (
+              <div className="space-y-6">
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Products</h3>
+                <div className="space-y-3">
+                  <div>
+                    <a
+                      href="https://amzn.to/435ZmYl"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-600 dark:text-blue-400 hover:underline font-medium"
+                    >
+                      Slant Board
+                    </a>
+                    <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                      everyone has tight hamstrings
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {activeSection === "music" && (
+              <div className="space-y-6">
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Music</h3>
+                <div className="space-y-3">
+                  <div>
+                    <a
+                      href="https://open.spotify.com/track/2Gu7LqbawC5nQ4pQBJHNeQ?si=1ba1f820a2654bf7"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-600 dark:text-blue-400 hover:underline font-medium"
+                    >
+                      Rodriguez - Sugar Man
+                    </a>
+                    <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                      Read about Rodriguez and watch the documentary. He lived in obscurity for decades in Detroit before being rediscovered as a superstar in South Africa.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
+        )}
       </div>
     </main>
   );
