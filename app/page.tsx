@@ -79,7 +79,7 @@ export default function Home() {
         {/* Biography */}
         <div className="text-center mb-6 sm:mb-8">
           <p className="text-base sm:text-lg md:text-xl text-gray-700 dark:text-gray-200 leading-relaxed drop-shadow-md">
-            Living Data
+            Alive
           </p>
         </div>
 
@@ -136,7 +136,6 @@ export default function Home() {
             >
               <path d="M20.5 4h-17A1.5 1.5 0 002 5.5v13A1.5 1.5 0 003.5 20h17a1.5 1.5 0 001.5-1.5v-13A1.5 1.5 0 0020.5 4zm-.32l-7.73 6.23a1 1 0 01-1.24 0L3.5 6zM3 18.5V8.12l7.48 6a3 3 0 003.74 0L21 8.12V18.5z" />
             </svg>
-            <span className="font-semibold">@</span>
           </button>
         </div>
         <div className="mt-4 text-center text-sm text-gray-600 dark:text-gray-300" aria-live="polite">
