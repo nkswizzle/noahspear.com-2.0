@@ -148,6 +148,78 @@ export default function Home() {
           {copyStatus === "copied" && "Email copied to clipboard!"}
           {copyStatus === "error" && "Unable to copy email. Please copy it manually."}
         </div>
+
+        {/* Content Tabs */}
+        <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-4">
+          {/* Bookshelf */}
+          <button
+            type="button"
+            className="flex flex-col items-center justify-center p-6 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-md hover:shadow-lg transition-all duration-200 transform hover:scale-105 border border-gray-200 dark:border-gray-700"
+          >
+            <svg
+              className="w-8 h-8 mb-3 text-gray-700 dark:text-gray-200"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth={2}
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+              />
+            </svg>
+            <span className="font-semibold text-gray-900 dark:text-white">Bookshelf</span>
+            <span className="text-xs text-gray-600 dark:text-gray-400 mt-1">Books & Reading</span>
+          </button>
+
+          {/* Links/Bookmarks */}
+          <button
+            type="button"
+            className="flex flex-col items-center justify-center p-6 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-md hover:shadow-lg transition-all duration-200 transform hover:scale-105 border border-gray-200 dark:border-gray-700"
+          >
+            <svg
+              className="w-8 h-8 mb-3 text-gray-700 dark:text-gray-200"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth={2}
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"
+              />
+            </svg>
+            <span className="font-semibold text-gray-900 dark:text-white">Links</span>
+            <span className="text-xs text-gray-600 dark:text-gray-400 mt-1">Bookmarks & Resources</span>
+          </button>
+
+          {/* Music */}
+          <button
+            type="button"
+            className="flex flex-col items-center justify-center p-6 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-md hover:shadow-lg transition-all duration-200 transform hover:scale-105 border border-gray-200 dark:border-gray-700"
+          >
+            <svg
+              className="w-8 h-8 mb-3 text-gray-700 dark:text-gray-200"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth={2}
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"
+              />
+            </svg>
+            <span className="font-semibold text-gray-900 dark:text-white">Music</span>
+            <span className="text-xs text-gray-600 dark:text-gray-400 mt-1">Playlists</span>
+          </button>
+        </div>
       </div>
     </main>
   );
