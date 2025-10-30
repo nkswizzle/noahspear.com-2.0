@@ -300,6 +300,19 @@ export default function Home() {
                       everyone has tight hamstrings
                     </p>
                   </div>
+                  <div>
+                    <a
+                      href="https://amzn.to/3JyKDyp"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-600 dark:text-blue-400 hover:underline font-medium"
+                    >
+                      Kneeling Desk Chair
+                    </a>
+                    <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                      Looks odd, but swear it's great
+                    </p>
+                  </div>
                 </div>
               </div>
             )}
