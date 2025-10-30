@@ -328,17 +328,32 @@ export default function Home() {
                       rel="noopener noreferrer"
                       className="text-blue-600 dark:text-blue-400 hover:underline font-medium"
                     >
-                      Rodriguez - Sugar Man
+                      Rodriguez - Climb Up On My Music
                     </a>
                     <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
                       Read about Rodriguez and watch the documentary. He lived in obscurity for decades in Detroit before being rediscovered as a superstar in South Africa.
                     </p>
+                  </div>
+                  <div>
+                    <a
+                      href="https://open.spotify.com/track/3S1fsqAI2wseDq6JcpamoY?si=1327e916f02e4a88"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-600 dark:text-blue-400 hover:underline font-medium"
+                    >
+                      GHOSTWOMAN - The End of a Gun
+                    </a>
                   </div>
                 </div>
               </div>
             )}
           </div>
         )}
+
+        {/* Last Updated */}
+        <div className="mt-12 text-center text-xs text-gray-500 dark:text-gray-400">
+          Last updated: October 30, 2025
+        </div>
       </div>
     </main>
   );
