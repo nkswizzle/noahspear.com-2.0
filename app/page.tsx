@@ -79,7 +79,7 @@ export default function Home() {
         {/* Biography */}
         <div className="text-center mb-6 sm:mb-8">
           <p className="text-base sm:text-lg md:text-xl text-gray-700 dark:text-gray-200 leading-relaxed drop-shadow-md">
-            this update went through GitHub...
+            Noah Bio Goes Here
           </p>
         </div>
 
