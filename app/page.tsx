@@ -204,7 +204,7 @@ export default function Home() {
                 d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
               />
             </svg>
-            <span className="font-semibold text-gray-900 dark:text-white">Products</span>
+            <span className="font-semibold text-gray-900 dark:text-white">Things</span>
             <span className="text-xs text-gray-600 dark:text-gray-400 mt-1">Recommendations</span>
           </button>
 
@@ -285,7 +285,7 @@ export default function Home() {
 
             {activeSection === "products" && (
               <div className="space-y-6">
-                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Products</h3>
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Things</h3>
                 <div className="space-y-3">
                   <div>
                     <a
