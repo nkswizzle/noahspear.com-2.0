@@ -352,7 +352,7 @@ export default function Home() {
 
         {/* Last Updated */}
         <div className="mt-12 text-center text-xs text-gray-500 dark:text-gray-400">
-          Last updated: October 30, 2025
+          Last updated: October 31, 2025
         </div>
       </div>
     </main>
