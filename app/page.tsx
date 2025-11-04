@@ -337,6 +337,16 @@ export default function Home() {
                       GHOSTWOMAN - The End of a Gun
                     </a>
                   </div>
+                  <div>
+                    <a
+                      href="https://open.spotify.com/track/5w1ulRJl5p321f13AK7YC3?si=dccf83956ad04fd3"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-600 dark:text-blue-400 hover:underline font-medium"
+                    >
+                      Guru - Look to the Sun
+                    </a>
+                  </div>
                 </div>
               </div>
             )}
