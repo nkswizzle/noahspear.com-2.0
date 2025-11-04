@@ -77,13 +77,6 @@ export default function Home() {
           Noah Spear
         </h1>
 
-        {/* Biography */}
-        <div className="text-center mb-6 sm:mb-8">
-          <p className="text-base sm:text-lg md:text-xl text-gray-700 dark:text-gray-200 leading-relaxed drop-shadow-md">
-            Alive
-          </p>
-        </div>
-
         {/* Social Links */}
         <div className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-4 md:gap-6">
           {/* LinkedIn */}
