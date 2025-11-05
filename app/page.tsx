@@ -347,6 +347,16 @@ export default function Home() {
                       Guru - Look to the Sun
                     </a>
                   </div>
+                  <div>
+                    <a
+                      href="https://open.spotify.com/track/0JT0D83NTt3o2VbZSI3f5K?si=abf835a002f8405f"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-600 dark:text-blue-400 hover:underline font-medium"
+                    >
+                      Lukas Nelson and Promise of the Real - Pali Gap / Hey Baby (New Rising Sun)
+                    </a>
+                  </div>
                 </div>
               </div>
             )}
