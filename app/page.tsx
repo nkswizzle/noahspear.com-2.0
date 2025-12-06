@@ -3,12 +3,26 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import AnimatedBackground from "./components/AnimatedBackground";
+import LoginPage from "./components/LoginPage";
 
 const CONTACT_EMAIL = "noah@noahspear.com";
 
 export default function Home() {
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const [copyStatus, setCopyStatus] = useState<"idle" | "copied" | "error">("idle");
   const [activeSection, setActiveSection] = useState<string | null>(null);
+
+  // Check authentication status on mount
+  useEffect(() => {
+    const authenticated = sessionStorage.getItem("authenticated") === "true";
+    setIsAuthenticated(authenticated);
+    setIsLoading(false);
+  }, []);
+
+  const handleAuthenticated = () => {
+    setIsAuthenticated(true);
+  };
 
   useEffect(() => {
     if (copyStatus === "idle") {
@@ -55,9 +69,24 @@ export default function Home() {
     fallbackCopy();
   };
 
+  // Show loading state
+  if (isLoading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
+        <div className="text-gray-600 dark:text-gray-400">Loading...</div>
+      </div>
+    );
+  }
+
+  // Show login page if not authenticated
+  if (!isAuthenticated) {
+    return <LoginPage onAuthenticated={handleAuthenticated} />;
+  }
+
   return (
     <main className="relative min-h-screen flex items-center justify-center p-4 sm:p-6 md:p-8 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 overflow-hidden">
       <AnimatedBackground />
+
       <div className="relative z-10 max-w-2xl w-full px-4">
         {/* Profile Image */}
         <div className="flex justify-center mb-6 sm:mb-8 px-4">
